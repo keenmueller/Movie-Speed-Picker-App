@@ -1,6 +1,7 @@
 import java.io.IOException;
 
 import Handlers.APIResponse;
+import Services.APICommunicator;
 
 public class TestMain {
     public static void main(String[] argv){

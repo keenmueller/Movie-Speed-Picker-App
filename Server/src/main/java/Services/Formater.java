@@ -1,3 +1,5 @@
+package Services;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +12,16 @@ import Handlers.ClientRequest;
 import Handlers.ClientResponse;
 
 public class Formater {
-    ClientResponse createList(ClientRequest r){
+
+    private ClientResponse fetchList(ClientRequest r){
+        APIResponse movies = createList(r);
+        if (movies != null){
+
+        }
+        return null;
+    }
+
+    private APIResponse createList(ClientRequest r){
         APICommunicator api = new APICommunicator();
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/discover/movie?api_key=");
 
@@ -36,10 +47,11 @@ public class Formater {
         String url = str.toString();
         try {
             APIResponse list = api.sendRequest(url);
+            return list;
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return null;
     }
 
     private String getAPIToken(){
@@ -57,10 +69,10 @@ public class Formater {
             return gotKey;
         }
         catch(FileNotFoundException ex) {
-            System.out.println("Unable to open file '" + dictionary + "'");
+            System.out.println("Unable to open file '" + key + "'");
         }
         catch(IOException ex) {
-            System.out.println("Error reading file '" + dictionary + "'");
+            System.out.println("Error reading file '" + key + "'");
         }
         return null;
     }

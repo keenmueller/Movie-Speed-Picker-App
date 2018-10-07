@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
 
+import Services.Formater;
+
 import static java.net.HttpURLConnection.HTTP_BAD_REQUEST;
 import static java.net.HttpURLConnection.HTTP_OK;
 
@@ -16,7 +18,7 @@ public class Handler implements HttpHandler{
     @Override
     public void handle(HttpExchange e) throws IOException {
         Gson gson = new Gson();
-        SPImplementation service = new SPImplementation();
+        Formater service = new Formater();
         ClientResponse response = new ClientResponse();
 
         if(e.getRequestMethod().toLowerCase().equals("post")) {
