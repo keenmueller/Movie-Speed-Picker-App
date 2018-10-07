@@ -3,7 +3,8 @@ import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-import Handlers.Handler;
+import Handlers.DetailHandler;
+import Handlers.ListHandler;
 
 public class Server {
     private static final int MAX_WAITING_CONNECTIONS = 12;
@@ -20,7 +21,8 @@ public class Server {
             return;
         }
         server.setExecutor(null);
-        server.createContext("/", new Handler()); // put this context towards the end of the server class:
+        server.createContext("/info", new DetailHandler());
+        server.createContext("/", new ListHandler()); // put this context towards the end of the server class:
         System.out.println("Starting server");
         server.start();
         System.out.println("Server started");

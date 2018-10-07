@@ -1,6 +1,6 @@
 package Handlers;
 
-public class ClientRequest {
+public class ListRequest {
     Integer runtime;
     Integer genre;
     String rating;

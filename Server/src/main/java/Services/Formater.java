@@ -7,21 +7,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import Handlers.APIResponse;
-import Handlers.ClientRequest;
-import Handlers.ClientResponse;
+import Handlers.DetailRequest;
+import Handlers.DetailResponse;
+import Handlers.ListResponse;
+import Handlers.ListRequest;
 
 public class Formater {
 
-    private ClientResponse fetchList(ClientRequest r){
-        APIResponse movies = createList(r);
-        if (movies != null){
-
-        }
-        return null;
-    }
-
-    private APIResponse createList(ClientRequest r){
+    public ListResponse createList(ListRequest r){
         APICommunicator api = new APICommunicator();
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/discover/movie?api_key=");
 
@@ -46,10 +39,29 @@ public class Formater {
 
         String url = str.toString();
         try {
-            APIResponse list = api.sendRequest(url);
+            ListResponse list = api.sendListRequest(url);
             return list;
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+
+    public DetailResponse createDetails(DetailRequest r){
+        APICommunicator api = new APICommunicator();
+        StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/movie/");
+        str.append(r.getMovieID());
+        str.append("?api_key=");
+        String key = getAPIToken();
+        str.append(key);
+        str.append("&language=en-US");
+        String url = str.toString();
+
+        try{
+            DetailResponse details = api.sendDetailRequest(url);
+            return details;
+        } catch (IOException e){
+            e.printStackTrace();;
         }
         return null;
     }

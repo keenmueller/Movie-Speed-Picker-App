@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-import Handlers.APIResponse;
+import Handlers.ListResponse;
 import Services.APICommunicator;
 
 public class TestMain {
@@ -12,7 +12,7 @@ public class TestMain {
         APICommunicator communicator = new APICommunicator();
         try{
             System.out.println("In the try");
-            APIResponse testModel = communicator.sendRequest(url);
+            ListResponse testModel = communicator.sendRequest(url);
         }
         catch(IOException e){
             System.out.println("failed");

@@ -1,5 +1,4 @@
 package Handlers;
-
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -14,23 +13,22 @@ import Services.Formater;
 import static java.net.HttpURLConnection.HTTP_BAD_REQUEST;
 import static java.net.HttpURLConnection.HTTP_OK;
 
-public class Handler implements HttpHandler{
+public class DetailHandler implements HttpHandler{
     @Override
     public void handle(HttpExchange e) throws IOException {
         Gson gson = new Gson();
         Formater service = new Formater();
-        ClientResponse response = new ClientResponse();
+        ListResponse response = new ListResponse();
 
         if(e.getRequestMethod().toLowerCase().equals("post")) {
             Reader read = new InputStreamReader(e.getRequestBody());
-            ClientRequest request = gson.fromJson(read, ClientRequest.class);
+            ListRequest request = gson.fromJson(read, ListRequest.class);
 
             //This is where I do the logic
-            String result = service.trim(request.getRequestString());
-            response.setAlteredString(result);
+            response = service.createList(request);
 
             read.close();
-            if(response.getMessage() == null){
+            if(response != null){
                 e.sendResponseHeaders(HTTP_OK, 0);
             }else{
                 e.sendResponseHeaders(HTTP_BAD_REQUEST, 0);

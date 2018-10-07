@@ -4,7 +4,7 @@ import java.util.List;
 
 import Models.MovieModel;
 
-public class APIResponse {
+public class ListResponse {
     int page;
     int total_results;
     int total_pages;
