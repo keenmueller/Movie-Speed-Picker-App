@@ -5,6 +5,9 @@ import java.net.InetSocketAddress;
 
 import Handlers.DetailHandler;
 import Handlers.ListHandler;
+import Handlers.ListRequest;
+import Handlers.ListResponse;
+import Services.Formater;
 
 public class Server {
     private static final int MAX_WAITING_CONNECTIONS = 12;
@@ -28,7 +31,21 @@ public class Server {
         System.out.println("Server started");
     }
     public static void main(String[] args) {
-        String portNumber = args[0];
+        String portNumber = "8081";
         new Server().run(portNumber);
     }
+//    public static void main(String[] args){
+//
+//        Formater formater = new Formater();
+//        ListRequest request = new ListRequest();
+//        request.setGenre("Drama");
+//        request.setRating("R");
+//        request.setRuntime(180);
+//
+//        ListResponse response = new ListResponse();
+//
+//        response = formater.createList(request);
+//
+//        System.out.println("hello");
+//    }
 }

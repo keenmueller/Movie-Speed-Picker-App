@@ -1,9 +1,13 @@
 package Services;
 
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -11,14 +15,20 @@ import Handlers.DetailRequest;
 import Handlers.DetailResponse;
 import Handlers.ListResponse;
 import Handlers.ListRequest;
+import Models.GenreListModel;
+import Models.GenreModel;
 
 public class Formater {
 
+    private GenreListModel genreList;
+
     public ListResponse createList(ListRequest r){
+        loadJson();
         APICommunicator api = new APICommunicator();
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/discover/movie?api_key=");
 
-        String key = getAPIToken();
+        //String key = getAPIToken();
+        String key = "636f9ac2dcc5fc7819536543b7425b02";
         //URL base
         str.append(key);
         str.append("&language=en-US&sort_by=popularity.desc");
@@ -30,7 +40,8 @@ public class Formater {
         str.append("&include_adult=false&include_video=false&page=1");
         if(r.getGenre() != null){
             str.append("&with_genres=");
-            str.append(r.getGenre().toString());
+            Integer id = findGenreID(r.getGenre());
+            str.append(id.toString());
         }
         if(r.getRuntime() != null){
             str.append("&with_runtime.lte=");
@@ -88,4 +99,25 @@ public class Formater {
         }
         return null;
     }
+
+    void loadJson(){
+        Gson gson = new Gson();
+        JsonReader reader = null;
+        try {
+            reader = new JsonReader(new FileReader("C:\\Users\\keena\\AndroidStudioProjects\\Movie-Speed-Picker-App\\Server\\genres.json"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        genreList = gson.fromJson(reader, GenreListModel.class);
+    }
+
+    int findGenreID(String name){
+        for (GenreModel g : genreList.getGenres()){
+            if (g.getName().equals(name)){
+                return g.getId();
+            }
+        }
+        return -1;
+    }
+
 }

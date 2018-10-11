@@ -1,4 +1,4 @@
-package Handlers;
+package com.example.keenan.moviespeedpicker.Proxy;
 
 public class ListRequest {
     Integer runtime;
