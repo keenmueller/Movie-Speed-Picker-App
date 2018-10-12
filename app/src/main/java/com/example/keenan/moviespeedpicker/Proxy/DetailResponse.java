@@ -7,11 +7,6 @@ import com.example.keenan.moviespeedpicker.Models.SpokenLanguageModel;
 
 import java.util.List;
 
-import Models.GenreModel;
-import Models.ProductionCompanyModel;
-import Models.ProductionCountryModel;
-import Models.SpokenLanguageModel;
-
 public class DetailResponse {
     boolean adult;
     String backdrop_path;

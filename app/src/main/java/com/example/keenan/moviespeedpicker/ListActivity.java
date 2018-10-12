@@ -49,7 +49,7 @@ public class ListActivity extends AppCompatActivity {
     }
 
 
-    public class MovieHolder extends RecyclerView.ViewHolder{
+    public class MovieHolder extends RecyclerView.ViewHolder {
 
         private TextView score;
         private TextView title;
@@ -65,56 +65,54 @@ public class ListActivity extends AppCompatActivity {
             detailsButton = (LinearLayout) itemView.findViewById(R.id.movie_details);
         }
 
-        void bind(Double vote_avg, String name, final MovieModel fullInfo){
+        void bind(Double vote_avg, String name, final MovieModel fullInfo) {
             this.vote_avg = vote_avg;
             this.name = name;
-            eventDetails.setText(info);
-            personName.setText(name);
             this.fullInfo = fullInfo;
 
-            eventButton.setOnClickListener(new View.OnClickListener(){
+            detailsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v){
-                    Toast.makeText(getApplicationContext(), "Event Selected", Toast.LENGTH_SHORT).show();
-                    UserInfo.getInstance().setEventSelected(fullInfo);
-                    startActivity(MapActivity.class);
+                public void onClick(View v) {
+                    Toast.makeText(getApplicationContext(), "Movie Selected", Toast.LENGTH_SHORT).show();
+                    //MovieResults.getInstance().s
+                    startActivity(DetailActivity.class);
                 }
             });
         }
+    }
 
-        public class MovieAdapter extends RecyclerView.Adapter<MovieHolder>{
+    public class MovieAdapter extends RecyclerView.Adapter<MovieHolder> {
 
-            private ArrayList<MovieModel> all_movies;
-            private LayoutInflater inflater;
+        private ArrayList<MovieModel> all_movies;
+        private LayoutInflater inflater;
 
-            public MovieAdapter(Context context, ArrayList<MovieModel> all_movies){
-                this.all_movies = all_movies;
-                inflater = LayoutInflater.from(context);
-            }
-
-            @Override
-            public MovieHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = inflater.inflate(R.layout.family_layout, parent, false);
-                return new FamilyHolder(view);
-            }
-
-            @Override
-            public void onBindViewHolder(MovieHolder holder, int position) {
-                Relative current = relatives.get(position);
-                String relativeName = current.getFirstName() + " " + current.getLastName();
-                holder.bind(current, relativeName);
-            }
-
-            @Override
-            public int getItemCount() {
-                return relatives.size();
-            }
+        public MovieAdapter(Context context, ArrayList<MovieModel> all_movies) {
+            this.all_movies = all_movies;
+            inflater = LayoutInflater.from(context);
         }
 
-        void startActivity(Class aClass) {
-            Intent intent = new Intent(getApplicationContext(), aClass);
-            startActivity(intent);
+        @Override
+        public MovieHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = inflater.inflate(R.layout.movie_layout, parent, false);
+            return new MovieHolder(view);
         }
 
+        @Override
+        public void onBindViewHolder(MovieHolder holder, int position) {
+            MovieModel current = all_movies.get(position);
+            Double votes = current.getVote_average();
+            String title = current.getTitle();
+            holder.bind(votes, title, current);
+        }
 
+        @Override
+        public int getItemCount() {
+            return all_movies.size();
+        }
+    }
+
+    void startActivity(Class aClass) {
+        Intent intent = new Intent(getApplicationContext(), aClass);
+        startActivity(intent);
+    }
 }
