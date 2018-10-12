@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 
 import Handlers.DetailHandler;
+import Handlers.DetailRequest;
+import Handlers.DetailResponse;
 import Handlers.ListHandler;
 import Handlers.ListRequest;
 import Handlers.ListResponse;
@@ -37,14 +39,16 @@ public class Server {
 //    public static void main(String[] args){
 //
 //        Formater formater = new Formater();
-//        ListRequest request = new ListRequest();
-//        request.setGenre("Drama");
-//        request.setRating("R");
-//        request.setRuntime(180);
-//
-//        ListResponse response = new ListResponse();
-//
-//        response = formater.createList(request);
+////        ListRequest request = new ListRequest();
+////        request.setGenre("Drama");
+////        request.setRating("R");
+////        request.setRuntime(180);
+////
+////        ListResponse response = new ListResponse();
+//        DetailRequest request = new DetailRequest();
+//        request.setMovieID(16);
+//        DetailResponse response= new DetailResponse();
+//        response = formater.createDetails(request);
 //
 //        System.out.println("hello");
 //    }

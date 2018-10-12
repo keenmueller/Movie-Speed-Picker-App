@@ -8,6 +8,7 @@ import java.util.List;
 class MovieResults {
     private List<MovieModel> movies;
     private DetailResponse full_details;
+    private String selectedMovieRating;
 
     private static final MovieResults ourInstance = new MovieResults();
 
@@ -32,5 +33,13 @@ class MovieResults {
 
     public void setFull_details(DetailResponse full_details) {
         this.full_details = full_details;
+    }
+
+    public String getSelectedMovieRating() {
+        return selectedMovieRating;
+    }
+
+    public void setSelectedMovieRating(String selectedMovieRating) {
+        this.selectedMovieRating = selectedMovieRating;
     }
 }

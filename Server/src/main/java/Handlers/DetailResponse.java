@@ -2,6 +2,7 @@ package Handlers;
 
 import java.util.List;
 
+import Models.CollectionModel;
 import Models.GenreModel;
 import Models.ProductionCompanyModel;
 import Models.ProductionCountryModel;
@@ -10,7 +11,7 @@ import Models.SpokenLanguageModel;
 public class DetailResponse {
     boolean adult;
     String backdrop_path;
-    String belongs_to_collection;
+    CollectionModel belongs_to_collection;
     int budget;
     List<GenreModel> genres;
     String homepage;
@@ -34,6 +35,14 @@ public class DetailResponse {
     double vote_average;
     long vote_count;
 
+    public CollectionModel getBelongs_to_collection() {
+        return belongs_to_collection;
+    }
+
+    public void setBelongs_to_collection(CollectionModel belongs_to_collection) {
+        this.belongs_to_collection = belongs_to_collection;
+    }
+
     public boolean isAdult() {
         return adult;
     }
@@ -48,14 +57,6 @@ public class DetailResponse {
 
     public void setBackdrop_path(String backdrop_path) {
         this.backdrop_path = backdrop_path;
-    }
-
-    public String getBelongs_to_collection() {
-        return belongs_to_collection;
-    }
-
-    public void setBelongs_to_collection(String belongs_to_collection) {
-        this.belongs_to_collection = belongs_to_collection;
     }
 
     public int getBudget() {

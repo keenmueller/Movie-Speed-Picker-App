@@ -168,6 +168,8 @@ public class SearchFragment extends Fragment {
                 int minutes = timeConversion(params[2]);
                 list.setRuntime(minutes);
 
+                MovieResults.getInstance().setSelectedMovieRating(params[1]);
+
                 ProxyService proxy = new ProxyService();
                 try {
                     ListResponse response = proxy.getList(list, url);

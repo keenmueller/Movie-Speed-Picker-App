@@ -31,7 +31,7 @@ public class Formater {
         String key = "636f9ac2dcc5fc7819536543b7425b02";
         //URL base
         str.append(key);
-        str.append("&language=en-US&sort_by=popularity.desc");
+        str.append("&language=en-US&sort_by=vote_average.desc");
 
         if(r.getRating() != null){
             str.append("&certification_country=US&certification=");
@@ -63,7 +63,8 @@ public class Formater {
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/movie/");
         str.append(r.getMovieID());
         str.append("?api_key=");
-        String key = getAPIToken();
+        String key = "636f9ac2dcc5fc7819536543b7425b02";
+//        String key = getAPIToken();
         str.append(key);
         str.append("&language=en-US");
         String url = str.toString();

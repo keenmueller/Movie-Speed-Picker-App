@@ -50,8 +50,7 @@ public class ProxyService {
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("POST");
-        conn.setDoOutput(false);
-
+        conn.setDoOutput(true);
         conn.connect();
 
         Gson gson = new Gson();

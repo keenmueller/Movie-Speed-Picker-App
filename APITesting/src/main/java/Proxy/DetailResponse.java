@@ -1,12 +1,12 @@
-package com.example.keenan.moviespeedpicker.Proxy;
-
-import com.example.keenan.moviespeedpicker.Models.CollectionModel;
-import com.example.keenan.moviespeedpicker.Models.GenreModel;
-import com.example.keenan.moviespeedpicker.Models.ProductionCompanyModel;
-import com.example.keenan.moviespeedpicker.Models.ProductionCountryModel;
-import com.example.keenan.moviespeedpicker.Models.SpokenLanguageModel;
+package Proxy;
 
 import java.util.List;
+
+import Models.CollectionModel;
+import Models.GenreModel;
+import Models.ProductionCompanyModel;
+import Models.ProductionCountryModel;
+import Models.SpokenLanguageModel;
 
 public class DetailResponse {
     boolean adult;

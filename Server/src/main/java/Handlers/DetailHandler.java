@@ -18,14 +18,14 @@ public class DetailHandler implements HttpHandler{
     public void handle(HttpExchange e) throws IOException {
         Gson gson = new Gson();
         Formater service = new Formater();
-        ListResponse response = new ListResponse();
+        DetailResponse response = new DetailResponse();
 
         if(e.getRequestMethod().toLowerCase().equals("post")) {
             Reader read = new InputStreamReader(e.getRequestBody());
-            ListRequest request = gson.fromJson(read, ListRequest.class);
+            DetailRequest request = gson.fromJson(read, DetailRequest.class);
 
             //This is where I do the logic
-            response = service.createList(request);
+            response = service.createDetails(request);
 
             read.close();
             if(response != null){
