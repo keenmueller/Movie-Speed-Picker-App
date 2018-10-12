@@ -14,8 +14,8 @@ public class ProxyService {
     public ListResponse getList(ListRequest r, String urlString) throws IOException{
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.setDoOutput(false);
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
 
         conn.connect();
 

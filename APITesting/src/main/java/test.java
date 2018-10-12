@@ -16,9 +16,10 @@ public class test {
         ProxyService service = new ProxyService();
 
         try {
-            response = service.getList(list, "http://127.0.0.1:8081");
+            response = service.getList(list, "http://127.0.0.1:8081/");
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("fail");
         }
         System.out.println("woot");
     }

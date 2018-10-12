@@ -21,6 +21,8 @@ public class ListHandler implements HttpHandler{
         Formater service = new Formater();
         ListResponse response = new ListResponse();
 
+        System.out.println("hit");
+
         if(e.getRequestMethod().toLowerCase().equals("post")) {
             Reader read = new InputStreamReader(e.getRequestBody());
             ListRequest request = gson.fromJson(read, ListRequest.class);
