@@ -9,6 +9,8 @@ import com.example.keenan.moviespeedpicker.Models.GenreModel;
 import com.example.keenan.moviespeedpicker.Proxy.DetailResponse;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
+
 public class DetailActivity extends AppCompatActivity {
 
     private ImageView poster;
@@ -58,7 +60,7 @@ public class DetailActivity extends AppCompatActivity {
         overview.setText(movieInfo.getOverview());
 
         length = (TextView) findViewById(R.id.detail_length);
-        String hours = convertToHours(movieInfo.getRuntime());
+        String hours = convertToHours(movieInfo.getRuntime()) + " Hours";
         length.setText(hours);
 
         rating = (TextView) findViewById(R.id.detail_rating);
@@ -76,6 +78,7 @@ public class DetailActivity extends AppCompatActivity {
     private String convertToHours(int runtime){
         double mathReady = runtime;
         Double hours = mathReady / 60;
-        return hours.toString();
+        DecimalFormat df = new DecimalFormat("###.##");
+        return df.format(hours);
     }
 }
