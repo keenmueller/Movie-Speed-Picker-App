@@ -124,19 +124,8 @@ public class SearchFragment extends Fragment {
 
     public void loadSpinners(View view){
         genreSelect = (Spinner) view.findViewById(R.id.genre_spinner);
-//        ArrayAdapter<CharSequence> gAdapter = ArrayAdapter.createFromResource(view.getContext(),
-//                R.array.genres, android.R.layout.simple_spinner_item);
-//        gAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         ratingSelect = (Spinner) view.findViewById(R.id.rating_spinner);
-//        ArrayAdapter<CharSequence> rAdapter = ArrayAdapter.createFromResource(view.getContext(),
-//                R.array.lengths, android.R.layout.simple_spinner_item);
-//        rAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         lengthSelect = (Spinner) view.findViewById(R.id.length_spinner);
-//        ArrayAdapter<CharSequence> lAdapter = ArrayAdapter.createFromResource(view.getContext(),
-////                R.array.ratings, android.R.layout.simple_spinner_item);
-////        lAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         genreSelect.setAdapter(gAdapter);
         ratingSelect.setAdapter(rAdapter);
