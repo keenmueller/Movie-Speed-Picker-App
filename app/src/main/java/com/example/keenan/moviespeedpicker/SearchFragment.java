@@ -159,7 +159,8 @@ public class SearchFragment extends Fragment {
 
         @Override
         protected String doInBackground(String... params) {
-            url = "http://10.0.2.2:8081/";
+            //url = "http://10.0.2.2:8081/";
+            url = "http://192.168.1.107:8081/";
 
 
                 ListRequest list = new ListRequest();

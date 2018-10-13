@@ -31,7 +31,7 @@ public class Formater {
         String key = "636f9ac2dcc5fc7819536543b7425b02";
         //URL base
         str.append(key);
-        str.append("&language=en-US&sort_by=vote_average.desc");
+        str.append("&language=en-US&sort_by=popularity.desc");
 
         if(r.getRating() != null){
             str.append("&certification_country=US&certification=");
@@ -74,29 +74,6 @@ public class Formater {
             return details;
         } catch (IOException e){
             e.printStackTrace();;
-        }
-        return null;
-    }
-
-    private String getAPIToken(){
-        File key = new File("C:\\Users\\keena\\secret\\movieapi.txt");
-        try {
-            FileInputStream fileReader = new FileInputStream(key);
-            BufferedInputStream bufferedReader = new BufferedInputStream(fileReader);
-            Scanner s = new Scanner(bufferedReader);
-
-            String gotKey = s.next();
-
-            s.close();
-            bufferedReader.close();
-            fileReader.close();
-            return gotKey;
-        }
-        catch(FileNotFoundException ex) {
-            System.out.println("Unable to open file '" + key + "'");
-        }
-        catch(IOException ex) {
-            System.out.println("Error reading file '" + key + "'");
         }
         return null;
     }

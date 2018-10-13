@@ -146,7 +146,8 @@ public class ListActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            url = "http://10.0.2.2:8081/info";
+            //url = "http://10.0.2.2:8081/info";
+            url = "http://192.168.1.107:8081/info";
 
             DetailRequest request = new DetailRequest();
             request.setMovieID(Integer.parseInt(params[0]));
