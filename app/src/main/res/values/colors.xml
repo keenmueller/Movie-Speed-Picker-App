@@ -4,4 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="grey">#d5d5d5</color>
+    <color name="slateGrey">#2f343b</color>
+    <color name="saddleBrown">#703030</color>
+    <color name="themeGrey">#7e827a</color>
+    <color name="wheat">#e3cda4</color>
+    <color name="indianred">#c77966</color>
+    <color name="whiteSmoke">#ebebeb</color>
+    <color name="black">#000000</color>
 </resources>

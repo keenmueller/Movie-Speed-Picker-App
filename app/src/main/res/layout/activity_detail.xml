@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@color/slateGrey"
     tools:context=".DetailActivity">
 
     <LinearLayout
@@ -27,12 +28,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="28dp"
+                android:textSize="24sp"
+                android:textColor="@color/whiteSmoke"
                 android:id="@+id/detail_score"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="32dp"
+                android:textSize="28sp"
+                android:textColor="@color/wheat"
                 android:id="@+id/detail_title"
                 android:text="MOVIE TITLE"/>
         </LinearLayout>
@@ -45,6 +48,8 @@
         android:textStyle="bold"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="3dp"
+        android:textSize="16sp"
+        android:textColor="@color/themeGrey"
         android:text="Synopsis:"/>
 
     <TextView
@@ -54,6 +59,8 @@
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginLeft="5dp"
+        android:textColor="@color/whiteSmoke"
+        android:textSize="14sp"
         android:id="@+id/synopsis"
         android:text="SYNOPSIS"/>
 
@@ -64,6 +71,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="3dp"
+        android:textSize="16sp"
+        android:textColor="@color/themeGrey"
         android:text="Genres:"/>
 
     <TextView
@@ -73,6 +82,8 @@
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginLeft="5dp"
+        android:textColor="@color/whiteSmoke"
+        android:textSize="14sp"
         android:id="@+id/detail_genres"
         android:text="LIST OF GENRES"/>
 
@@ -89,12 +100,16 @@
             android:layout_marginLeft="5dp"
             android:layout_marginBottom="3dp"
             android:layout_marginRight="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/themeGrey"
             android:text="Rating:"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/detail_rating"
+            android:textColor="@color/whiteSmoke"
+            android:textSize="14sp"
             android:text="RATING"/>
 
         <TextView
@@ -104,6 +119,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="3dp"
             android:layout_marginRight="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/themeGrey"
             android:text="Length:"/>
 
         <TextView
@@ -113,6 +130,8 @@
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginLeft="5dp"
+            android:textColor="@color/whiteSmoke"
+            android:textSize="14sp"
             android:id="@+id/detail_length"
             android:text="LENGTH"/>
 
@@ -131,6 +150,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginBottom="3dp"
             android:layout_marginRight="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/themeGrey"
             android:text="Release Date:"/>
 
         <TextView
@@ -140,6 +161,8 @@
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginLeft="5dp"
+            android:textColor="@color/whiteSmoke"
+            android:textSize="14sp"
             android:id="@+id/detail_year"
             android:text="YEAR"/>
 
@@ -150,6 +173,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="3dp"
             android:layout_marginRight="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/themeGrey"
             android:text="Language:"/>
 
         <TextView
@@ -159,6 +184,8 @@
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginLeft="5dp"
+            android:textColor="@color/whiteSmoke"
+            android:textSize="14sp"
             android:textAllCaps="true"
             android:id="@+id/detail_language"
             android:text="LANGUAGE"/>

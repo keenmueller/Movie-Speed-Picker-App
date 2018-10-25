@@ -82,13 +82,13 @@ public class SearchFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         gAdapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.genres, android.R.layout.simple_spinner_item);
+                R.array.genres, R.layout.spinner_style);
 
         rAdapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.ratings, android.R.layout.simple_spinner_item);
+                R.array.ratings, R.layout.spinner_style);
 
         lAdapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.lengths, android.R.layout.simple_spinner_item);
+                R.array.lengths, R.layout.spinner_style);
 
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);

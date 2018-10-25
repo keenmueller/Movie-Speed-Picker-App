@@ -101,8 +101,6 @@ public class ListActivity extends AppCompatActivity {
             detailsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), "Movie Selected", Toast.LENGTH_SHORT).show();
-
                     String movieID = Integer.toString(fullInfo.getId());
                     new MovieAsync().execute(movieID);
                 }

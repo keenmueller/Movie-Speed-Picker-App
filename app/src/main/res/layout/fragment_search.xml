@@ -5,58 +5,68 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/slateGrey"
     tools:context=".SearchFragment">
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:textColor="@color/themeGrey"
+        android:textSize="15sp"
         android:text="Genre"/>
     <Spinner
         android:id="@+id/genre_spinner"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:minWidth="15dp"
-        android:textColor="#000000"
-        android:layout_marginBottom="10dp"
+        android:popupBackground="@color/slateGrey"
+        android:backgroundTint="@color/themeGrey"
+        android:layout_marginBottom="20dp"
         />
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:textColor="@color/themeGrey"
+        android:textSize="15sp"
         android:text="Rating"/>
     <Spinner
         android:id="@+id/rating_spinner"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:minWidth="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
+        android:popupBackground="@color/slateGrey"
+        android:backgroundTint="@color/themeGrey"
         />
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:textColor="@color/themeGrey"
+        android:textSize="15sp"
         android:text="Length"/>
     <Spinner
         android:id="@+id/length_spinner"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:minWidth="15dp"
         android:layout_marginBottom="150dp"
+        android:popupBackground="@color/slateGrey"
+        android:backgroundTint="@color/themeGrey"
         />
 
     <Button
         android:id="@+id/button_search"
         android:layout_height="wrap_content"
         android:layout_width="200dp"
-        android:textSize="20dp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="#525252"
+        android:background="@color/saddleBrown"
+        android:textColor="@color/wheat"
         android:text="Start Search" />
 
 
