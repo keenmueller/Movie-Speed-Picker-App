@@ -3,7 +3,6 @@
     <string-array name="genres">
         <item>Action</item>
         <item>Adventure</item>
-        <item>Satellite</item>
         <item>Animation</item>
         <item>Comedy</item>
         <item>Crime</item>

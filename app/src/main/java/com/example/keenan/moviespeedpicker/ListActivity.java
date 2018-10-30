@@ -45,7 +45,6 @@ import java.util.concurrent.ExecutionException;
 public class ListActivity extends AppCompatActivity {
 
     private RecyclerView movieRec;
-    private Button startOver;
     private MovieAdapter movieAdapter;
 
     @Override
@@ -53,7 +52,6 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        startOver = (Button) findViewById(R.id.button_search);
         movieRec = (RecyclerView) findViewById(R.id.movieListView);
         movieRec.setLayoutManager(new LinearLayoutManager(this));
 
