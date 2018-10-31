@@ -43,12 +43,6 @@
                 android:text="Movie Title"/>
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:src="@drawable/ic_chevron_right_theme_24dp"/>
-
     </LinearLayout>
     <View
         android:layout_width="fill_parent"
