@@ -28,7 +28,7 @@ public class Formater {
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/discover/movie?api_key=");
 
         //String key = getAPIToken();
-        String key = "Put The API Key Here";
+        String key = "Put The API Key Here!";
         //URL base
         str.append(key);
         str.append("&language=en-US&sort_by=popularity.desc");
@@ -63,7 +63,7 @@ public class Formater {
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/movie/");
         str.append(r.getMovieID());
         str.append("?api_key=");
-        String key = "Put API key Here";
+        String key = "Put API key Here!";
 //        String key = getAPIToken();
         str.append(key);
         str.append("&language=en-US");
