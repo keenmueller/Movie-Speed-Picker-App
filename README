@@ -1,4 +1,6 @@
-This is an Android Application I am creating for a School project that uses information from IMDB accessed from themoviedb.org
+Android project that will display a list of movies and thier information after selecting a list of criteria.
+
+Version 1 is up and running, I will update the readme as soon as I figure out how to include screenshots of the working project
 
 To use the API please go to themoviedb.org for additional information
 
