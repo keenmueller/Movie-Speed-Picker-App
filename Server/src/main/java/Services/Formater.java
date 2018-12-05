@@ -28,7 +28,7 @@ public class Formater {
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/discover/movie?api_key=");
 
         //String key = getAPIToken();
-        String key = "636f9ac2dcc5fc7819536543b7425b02";
+        String key = "Put The API Key Here";
         //URL base
         str.append(key);
         str.append("&language=en-US&sort_by=popularity.desc");
@@ -63,7 +63,7 @@ public class Formater {
         StringBuilder str = new StringBuilder("https://api.themoviedb.org/3/movie/");
         str.append(r.getMovieID());
         str.append("?api_key=");
-        String key = "636f9ac2dcc5fc7819536543b7425b02";
+        String key = "Put API key Here";
 //        String key = getAPIToken();
         str.append(key);
         str.append("&language=en-US");
@@ -82,7 +82,7 @@ public class Formater {
         Gson gson = new Gson();
         JsonReader reader = null;
         try {
-            reader = new JsonReader(new FileReader("C:\\Users\\keena\\AndroidStudioProjects\\Movie-Speed-Picker-App\\Server\\genres.json"));
+            reader = new JsonReader(new FileReader("path to JSON file"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
