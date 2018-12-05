@@ -22,7 +22,7 @@ public class test {
         ProxyService service = new ProxyService();
 
         try {
-            response = service.getDetails(request, "http://127.0.0.1:8081/info");
+            response = service.getDetails(request, "http://18.223.216.151/info");
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("fail");
