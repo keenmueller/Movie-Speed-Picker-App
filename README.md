@@ -10,7 +10,7 @@ The home screen shows three different categories to choose from:
 - Genre
 - Rating (based on Motion Picture Association of America)
 - Length
-![alt text](http://keenanmueller.com/MovieSpeedPicker/images/screenshot1.png | width=48)   ![alt text](http://keenanmueller.com/MovieSpeedPicker/images/screenshot2.png)
+<img src="http://keenanmueller.com/MovieSpeedPicker/images/screenshot1.png" width="256" height="256" title="Home Screen">  ![alt text](http://keenanmueller.com/MovieSpeedPicker/images/screenshot2.png)
 
 
 The idea of the app was to select a popular movie as quickly as possible based on a small list of criteria.
