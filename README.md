@@ -12,7 +12,7 @@ The home screen shows three different categories to choose from:
 - Length
 <br/>
 <img src="http://keenanmueller.com/MovieSpeedPicker/images/screenshot1.png" width="288" height="512" title="Home Screen"> 
-<img src="http://keenanmueller.com/MovieSpeedPicker/images/screenshot2.png" width="288" height="512" title="Home Screen">
+<img src="http://keenanmueller.com/MovieSpeedPicker/images/screenshot2.png" width="288" height="512" title="Home Screen"><img/><img/>
 
 
 The idea of the app was to select a popular movie as quickly as possible based on a small list of criteria.
